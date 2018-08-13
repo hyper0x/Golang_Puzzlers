@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"puzzlers/m1c1s3/q4/lib"
-	//in "puzzlers/m1c1s3/q4/lib/internal" // 此行无法通过编译。
+	"puzzlers/article3/q4/lib"
+	//in "puzzlers/article3/q4/lib/internal" // 此行无法通过编译。
 	//"os"
 )
 
