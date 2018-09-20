@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync/atomic"
+	"time"
 )
 
 func main() {
@@ -14,6 +15,7 @@ func main() {
 				atomic.AddUint32(&count, 1)
 				break
 			}
+			time.Sleep(time.Nanosecond)
 		}
 	}
 	for i := uint32(0); i < 10; i++ {
