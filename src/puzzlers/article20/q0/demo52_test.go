@@ -34,7 +34,7 @@ func TestHello(t *testing.T) {
 	t.Logf("The expected greeting is %q.\n", expected)
 }
 
-func TesIntroduce(t *testing.T) {
+func TestIntroduce(t *testing.T) {
 	intro := introduce()
 	expected := "Welcome to my Golang column."
 	if intro != expected {
