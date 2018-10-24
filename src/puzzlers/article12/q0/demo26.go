@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-type Printer func(content string) (n int, err error)
+type Printer func(contents string) (n int, err error)
 
-func printToStd(content string) (bytesNum int, err error) {
-	return fmt.Println(content)
+func printToStd(contents string) (bytesNum int, err error) {
+	return fmt.Println(contents)
 }
 
 func main() {

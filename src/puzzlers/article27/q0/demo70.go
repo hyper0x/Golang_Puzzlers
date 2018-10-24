@@ -15,9 +15,9 @@ type Buffer interface {
 	// Delimiter 用于获取数据块之间的定界符。
 	Delimiter() byte
 	// Write 用于写一个数据块。
-	Write(content string) (err error)
+	Write(contents string) (err error)
 	// Read 用于读一个数据块。
-	Read() (content string, err error)
+	Read() (contents string, err error)
 	// Free 用于释放当前的缓冲区。
 	Free()
 }
@@ -32,14 +32,14 @@ func (b *myBuffer) Delimiter() byte {
 	return b.delimiter
 }
 
-func (b *myBuffer) Write(content string) (err error) {
-	if _, err = b.buf.WriteString(content); err != nil {
+func (b *myBuffer) Write(contents string) (err error) {
+	if _, err = b.buf.WriteString(contents); err != nil {
 		return
 	}
 	return b.buf.WriteByte(b.delimiter)
 }
 
-func (b *myBuffer) Read() (content string, err error) {
+func (b *myBuffer) Read() (contents string, err error) {
 	return b.buf.ReadString(b.delimiter)
 }
 
