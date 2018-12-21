@@ -20,6 +20,7 @@ func example1() {
 		make(chan int, 1),
 	}
 	// 随机选择一个通道，并向它发送元素值。
+	rand.Seed(time.Now().UnixNano())
 	index := rand.Intn(3)
 	fmt.Printf("The index: %d\n", index)
 	intChannels[index] <- index
