@@ -48,7 +48,7 @@ func main() {
 	} else {
 		fmt.Printf("error(other): %s\n", err)
 	}
-	os.ErrPermission = os.ErrExist
+	err = os.ErrExist
 	if os.IsPermission(err) {
 		fmt.Printf("error(permission): %s\n", err)
 	} else {
