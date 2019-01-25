@@ -49,6 +49,10 @@ func main() {
 		fmt.Printf("error(other): %s\n", err)
 	}
 	os.ErrPermission = os.ErrExist
+	// 上面这行代码修改了os包中已定义的错误值。
+	// 这样做会导致下面判断的结果不正确。
+	// 并且，这会影响到当前Go程序中所有的此类判断。
+	// 所以，一定要避免这样做！
 	if os.IsPermission(err) {
 		fmt.Printf("error(permission): %s\n", err)
 	} else {
