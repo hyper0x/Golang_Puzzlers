@@ -16,8 +16,8 @@ func main() {
 	//name := flag.String("name", "everyone", "The greeting object.")
 
 	flag.Parse()
-	fmt.Printf("Hello, %s!\n", name)
+	fmt.Printf("Hello, %v!\n", name)
 
 	// 适用于方式1和方式2。
-	//fmt.Printf("Hello, %s!\n", *name)
+	//fmt.Printf("Hello, %v!\n", *name)
 }
