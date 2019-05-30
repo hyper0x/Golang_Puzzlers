@@ -39,4 +39,4 @@
 
 我已经邀请了国内知名的几位Go语言技术布道者成为该星球的合伙人。我们每周（甚至每天）都会在这个星球里发布一些有价值的信息或文章。现诚邀所有喜爱Go语言的技术人入驻。大家可以下载知识星球App并搜索`GoHackers VIP`，也可以直接扫描下图中的二维码入驻。
 
-<img width="207px" height="273px" src="gohackers_planet.jpeg"/>
+<img width="280px" height="368px" src="gohackers_planet.jpeg"/>
