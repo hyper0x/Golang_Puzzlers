@@ -69,7 +69,7 @@ func genProfile(dir string, name string, debug int) error {
 		fmt.Printf("execute error: %v (%s)\n", err, fileName)
 		return err
 	}
-	profile := pprof.Lookup("block")
+	profile := pprof.Lookup(name)
 	err = profile.WriteTo(f, debug)
 	if err != nil {
 		fmt.Printf("write error: %v (%s)\n", err, fileName)
