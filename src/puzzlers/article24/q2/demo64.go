@@ -34,7 +34,7 @@ func main() {
 	box3 := box // 原子值在真正使用后不应该被复制！
 	fmt.Printf("The value load from box3 is %v.\n", box3.Load())
 	v3 := 123
-	fmt.Printf("Store %d to box2.\n", v3)
+	fmt.Printf("Store %d to box3.\n", v3)
 	//box3.Store(v3) // 这里会引发一个panic，报告存储值的类型不一致。
 	_ = box3
 	fmt.Println()
