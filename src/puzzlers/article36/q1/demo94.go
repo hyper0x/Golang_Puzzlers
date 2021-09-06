@@ -26,9 +26,9 @@ func main() {
 	myTransport := &http.Transport{
 		Proxy: http.ProxyFromEnvironment,
 		DialContext: (&net.Dialer{
-			Timeout:   15 * time.Second,
-			KeepAlive: 15 * time.Second,
-			DualStack: true,
+			Timeout:       15 * time.Second,
+			KeepAlive:     15 * time.Second,
+			FallbackDelay: 0,
 		}).DialContext,
 		MaxConnsPerHost:       2,
 		MaxIdleConns:          10,
